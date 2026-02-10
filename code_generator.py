@@ -3,7 +3,7 @@ import string
 
 class CodeGenerator:
     def __init__(self):
-        self.current_length = 4 
+        self.current_length = 2 
         self.round_counter = 0  
 
     def generate_code(self) -> str:
@@ -18,7 +18,8 @@ class CodeGenerator:
 
     def generate_answers(self, code: str) -> list[str]:
 
-        num_options = 2 + self.round_counter % 4 if self.round_counter % 4 else 6  
+        #num_options = 2 + self.round_counter % 4 if self.round_counter % 4 else 6
+        num_options = random.randint(3, 5)  
         options = set()
         options.add(code) 
         
